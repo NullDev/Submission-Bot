@@ -1,0 +1,20 @@
+{
+  "name": "discord-submission-bot",
+  "version": "1.0.0",
+  "description": "Discord Bot for Image Submissions",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "NullDev",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.19.6",
+    "@babel/eslint-parser": "^7.19.1",
+    "eslint": "^8.26.0"
+  },
+  "dependencies": {
+    "discord.js": "^13.12.0"
+  }
+}
