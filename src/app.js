@@ -39,20 +39,16 @@ Bitte poste das **BANNER**:`,
     state = -1;
 });
 
-async function getBanner(msg) {
-    let bannerAttachment = msg.attachments.at(0);
-
-    if(bannerAttachment.contentType === "image/png" || bannerAttachment.contentType === "image/gif") {
-        userAttachments.find(entry => entry.username === msg.author.username).attachments.banner = bannerAttachment.url;
-        return;
-    }
-    await msg.channel.send("Das war weder ein Bild noch ein Gif...willst du mich hacken oder so?");
-}
-
-async function getServerPicture(msg) {
-    let serverPicAttachment = msg.attachments.at(0);
-    if(serverPicAttachment.contentType === "image/png" || serverPicAttachment.contentType === "image/gif") {
-        userAttachments.find(entry => entry.username === msg.author.username).attachments.serverPic = serverPicAttachment.url;
+async function getAttachment(msg) {
+    let attachment = msg.attachments.at(0);
+    if(attachment.contentType === "image/png" || attachment.contentType === "image/gif") {
+        if(state === 1) {
+            userAttachments.find(entry => entry.username === msg.author.username).attachments.serverPic = attachment.url;
+        } else if(state === -1) {
+            userAttachments.find(entry => entry.username === msg.author.username).attachments.banner = attachment.url;
+            await msg.channel.send("Als nächstes schicke bitte das Profilbild!");
+            state = 1;
+        }
         return;
     }
     await msg.channel.send("Das war weder ein Bild noch ein Gifs...willst du mich hacken oder so?");
@@ -71,19 +67,13 @@ client.on("messageCreate", async msg => {
     }
 
     userAttachments.push({"username": msg.author.username, attachments: {}});
-    if(state === -1) {
-        await getBanner(msg);
-        state = 1;
-
-        await msg.channel.send("Als nächstes schicke bitte das Profilbild!");
-        return;
-    } else if(state === 1) {
-        getServerPicture(msg);
-    }
+    
+    getAttachment(msg);
+    if(state == -1) return;
 
     const userContent = userAttachments.find(entry => entry.username === msg.author.username);
     // check if banner and profile pic are given
-    if(userContent.attachments.banner && userContent.attachments.serverPic) {
+    if(!userContent.attachments.banner || !userContent.attachments.serverPic) {
         await msg.channel.send("Irgendwas ist mit den Anhängen falsch gelaufen...");
         return;
     }
@@ -92,6 +82,7 @@ client.on("messageCreate", async msg => {
     await contestChannel.send({
         files: [userContent.attachments.banner, userContent.attachments.serverPic]
     });
+    // add reaction
     
 });
 
