@@ -82,7 +82,12 @@ client.on("messageCreate", async msg => {
     await contestChannel.send({
         files: [userContent.attachments.banner, userContent.attachments.serverPic]
     });
+    
     // add reaction
+    contestChannel.messages.fetch({limit: 1}).then(messages =>{
+        const lastMessage = messages.first();
+        lastMessage.react("⭐");
+    });
     
 });
 
