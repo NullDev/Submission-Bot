@@ -21,7 +21,7 @@ const buildEmbed = function(author, banner, icon, description){
             name: author.tag,
             iconURL: author.displayAvatarURL(),
         })
-        .setFooter({ text: "Klicke auf die Bilder, um sie zu vergrößern (Links: Banner, Rechts: Icon)!\nACHTUNG: Auf dem Handy sieht man nur das Banner!" })
+        .setFooter({ text: "Klicke auf die Bilder, um sie zu vergrößern!\nLinks: Banner, Rechts: Icon.\nACHTUNG: Auf dem Handy sieht man nur das Banner!" })
         .setColor("RANDOM");
 
     const embed2 = new MessageEmbed()
