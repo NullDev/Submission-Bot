@@ -43,6 +43,9 @@ const promptUser = async function(prompt, interaction, desired){
                         : msg.content,
                 ),
             );
+        }).catch(() => {
+            interaction.user.send("Zu langsam... Versuchs nochmal.");
+            resolve(null);
         });
     });
 };
