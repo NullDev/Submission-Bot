@@ -55,4 +55,7 @@ client.on("interactionCreate", async interaction => {
     }
 });
 
-client.login(config.token).then(() => console.log("Logged in!"));
+client.login(config.token).then(() => console.log("Logged in!")).catch(() => {
+    console.log("Failed to login!");
+    process.exit(1);
+});
