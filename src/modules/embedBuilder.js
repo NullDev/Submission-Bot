@@ -1,6 +1,4 @@
-"use strict";
-
-const { MessageEmbed } = require("discord.js");
+import { MessageEmbed } from "discord.js";
 
 /**
  * Build Embed
@@ -31,4 +29,4 @@ const buildEmbed = function(author, banner, icon, description){
     return [embed1, embed2];
 };
 
-module.exports = buildEmbed;
+export default buildEmbed;

@@ -1,16 +1,14 @@
-"use strict";
-
 // Dependencies
-const { Client, Intents, MessageActionRow, MessageButton } = require("discord.js");
+import { Client, Intents, MessageActionRow, MessageButton } from "discord.js";
 
 // Utils
-const startInteraction = require("./modules/startInteraction");
+import startInteraction from "./modules/startInteraction.js";
 
 const client = new Client({
     intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.DIRECT_MESSAGES],
 });
 
-const config = require("../config.json");
+import config from "../config.js";
 
 client.on("ready", async() => {
     console.log(`Logged in as ${client.user?.tag}!`);

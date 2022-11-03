@@ -1,7 +1,5 @@
-"use strict";
-
-const promptUser = require("./promptUser");
-const buildEmbed = require("./embedBuilder");
+import promptUser from "./promptUser.js";
+import buildEmbed from "./embedBuilder.js";
 
 /**
  * Start interaction
@@ -36,4 +34,4 @@ const startInteraction = async function(interaction, client, config){
     interaction.user.send("Dein Eintrag wurde erfolgreich gesendet!");
 };
 
-module.exports = startInteraction;
+export default startInteraction;

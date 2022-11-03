@@ -1,5 +1,3 @@
-"use strict";
-
 /* eslint-disable consistent-return */
 
 /**
@@ -11,13 +9,11 @@
  * @return {Promise<String|null|Function>}
  */
 const promptUser = async function(prompt, interaction, desired){
-    const filter = m => m.author.id === interaction.user.id;
-
     await interaction.user.send({ content: prompt });
 
     return new Promise((resolve) => {
         interaction.user.dmChannel?.awaitMessages({
-            filter,
+            filter: m => m.author.id === interaction.user.id,
             max: 1,
             time: 30000,
             errors: ["time"],
@@ -51,4 +47,4 @@ const promptUser = async function(prompt, interaction, desired){
     });
 };
 
-module.exports = promptUser;
+export default promptUser;
