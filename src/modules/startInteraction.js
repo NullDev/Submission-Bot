@@ -14,7 +14,9 @@ const startInteraction = async function(interaction, client, config){
 
     interaction.user.send(
         "Hallo!\nHier kannst du deine Bilder submitten.\nWenn du es dir anders überlegst, schreibe einfach \"stop\"!\n----",
-    );
+    ).catch(() => {
+        return interaction.reply({ content: "Du hast deine PN's deaktiviert!", ephemeral: true });
+    });
 
     const banner = await promptUser("Bitte poste das **BANNER**:", interaction, "img");
     if (!banner) return;
