@@ -10,6 +10,8 @@ const client = new Client({
 
 import config from "../config.js";
 
+global.submittingUsers = [];
+
 client.on("ready", async() => {
     console.log(`Logged in as ${client.user?.tag}!`);
     client.user?.setActivity(config.activity, { type: "PLAYING" });
