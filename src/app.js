@@ -55,6 +55,10 @@ client.on("interactionCreate", async interaction => {
     }
 });
 
+process.on("unhandledRejection", (err, promise) => {
+    console.log("Unhandled rejection (promise: " + JSON.stringify(promise) + ", reason: " + err + ")");
+});
+
 client.login(config.token).then(() => console.log("Logged in!")).catch(() => {
     console.log("Failed to login!");
     process.exit(1);
