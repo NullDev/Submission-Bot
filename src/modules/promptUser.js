@@ -27,8 +27,11 @@ const promptUser = async function(prompt, interaction, desired){
             }
 
             if (
-                (desired === "img" && msg.attachments.size === 0)
-                || !["image/gif", "image/png", "image/jpg", "image/jpeg"].includes(String(msg.attachments.at(0)?.contentType))
+                desired === "img"
+                && (
+                    msg.attachments.size === 0
+                    || !["image/gif", "image/png", "image/jpg", "image/jpeg"].includes(String(msg.attachments.at(0)?.contentType))
+                )
             ){
                 interaction.user.send("Du hast kein Bild gesendet!");
                 return resolve(promptUser(prompt, interaction, desired));
