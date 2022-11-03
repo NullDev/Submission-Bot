@@ -41,7 +41,7 @@ const startInteraction = async function(interaction, client, config){
 
     client.channels.cache.get(config.send_to_channel)?.fetch()
         .then(channel => channel.send({ embeds: [...embeds] })
-            .then(message => message.react("⭐")));
+            .then(message => message.react("⭐")).catch(() => console.log("No perms lol")));
 
     interaction.user.send("Dein Eintrag wurde erfolgreich gesendet!");
 
