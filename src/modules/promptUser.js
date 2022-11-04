@@ -21,7 +21,7 @@ const promptUser = async function(prompt, interaction, desired){
             const msg = message.first();
             if (!msg) return;
 
-            if (msg.content === "stop"){
+            if (String(msg.content).toLowerCase() === "stop"){
                 interaction.user.send("Abgebrochen!");
                 return resolve(null);
             }
