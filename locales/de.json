@@ -18,5 +18,15 @@
         "no_image": "Du hast kein Bild gesendet!",
         "no_text": "Du hast keinen Text gesendet!",
         "too_slow": "Zu langsam! Bitte versuche es erneut"
+    },
+    "interaction": {
+        "already_pending_submission": "Du reichst gerade schon ein Bild ein! Bitte schließe den Prozess erst ab, bevor du ein weiteres Bild einreichst.",
+        "check_dms": "Schau in deine PN's :)",
+        "user_greeting": "Hallo!\nHier kannst du dein Bild einreichen.\nWenn du es dir anders überlegst, kannst du jederzeit einfach \"stop\" schreiben!\n----",
+        "dms_deactivated": "Du hast deine PN's anscheinend deaktiviert. Bitte aktiviere sie, um diesen Bot zu verwenden.",
+        "post_the_image": "Bitte sende das **BILD**:",
+        "post_the_decsription": "Bitte sende eine kurze **BESCHREIBUNG**:",
+        "no_post_permission": "Fehler: Keine Rechte zum senden!",
+        "submission_successful": "Dein Bild wurde erfolgreich eingereicht!"
     }
 }
