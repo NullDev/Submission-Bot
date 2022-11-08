@@ -4,4 +4,5 @@ export default {
     guild: "your guild",
     admin: "your admin id",
     send_to_channel: "your channel",
+    language: "en",
 };
