@@ -6,12 +6,11 @@ import i18n from "i18n-light";
  *
  * @param {import("discord.js").User} author
  * @param {String} banner
- * @param {String} icon
  * @param {String} description
- * @return {Array}
+ * @return {import("discord.js").MessageEmbed}
  */
-const buildEmbed = function(author, banner, icon, description){
-    const embed1 = new MessageEmbed()
+const buildEmbed = function(author, banner, description){
+    return new MessageEmbed()
         .setURL(banner)
         .setImage(banner)
         .setTitle(i18n.__("embed.submission_of", author.tag))
@@ -22,12 +21,6 @@ const buildEmbed = function(author, banner, icon, description){
         })
         .setFooter({ text: i18n.__("embed.embed_footer") })
         .setColor("RANDOM");
-
-    const embed2 = new MessageEmbed()
-        .setURL(banner)
-        .setImage(icon);
-
-    return [embed1, embed2];
 };
 
 export default buildEmbed;
