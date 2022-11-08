@@ -17,13 +17,13 @@
         "canceled": "Canceled!",
         "no_image": "You didn't send an image!",
         "no_text": "You didn't send any text!",
-        "too_slow": "You took too long to respond. Try again"
+        "too_slow": "You took too long to respond. Please try again."
     },
     "interaction": {
         "already_pending_submission": "You already have a pending submission! Please either finish or cancel it before submitting another one.",
         "check_dms": "Check your DMs :)",
-        "user_greeting": "Heya! You can submit your image here.\nIf you change your mind, you can send \"stop\" at any point!\n----",
-        "dms_deactivated": "You have deactivated your DMs. Please activate them to use this bot.",
+        "user_greeting": "Heya! You can submit your image here.\nIf you change your mind at any point, just send \"stop\"!\n----",
+        "dms_deactivated": "It seems like you deactivated your DMs. Please activate them to use this bot.",
         "post_the_image": "Please post the **IMAGE**:",
         "post_the_decsription": "Please post a short **DESCRIPTION**:",
         "no_post_permission": "Error: No permissions to send message!",
