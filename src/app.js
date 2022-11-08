@@ -55,7 +55,7 @@ client.on("interactionCreate", async interaction => {
                 components: [row],
             });
 
-            await interaction.reply({ content: "Button erstellt!", ephemeral: true });
+            await interaction.reply({ content: i18n.__("app.created_button"), ephemeral: true });
         }
 
         if (interaction.commandName === "submit") startInteraction(interaction, client, config);

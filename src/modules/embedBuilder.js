@@ -1,4 +1,5 @@
 import { MessageEmbed } from "discord.js";
+import i18n from "i18n-light";
 
 /**
  * Build Embed
@@ -13,13 +14,13 @@ const buildEmbed = function(author, banner, icon, description){
     const embed1 = new MessageEmbed()
         .setURL(banner)
         .setImage(banner)
-        .setTitle("Submission von " + author.tag)
+        .setTitle(i18n.__("embed.submission_of", author.tag))
         .setDescription("Beschreibung: " + description)
         .setAuthor({
             name: author.tag,
             iconURL: author.displayAvatarURL(),
         })
-        .setFooter({ text: "Klicke auf die Bilder, um sie zu vergrößern!\nLinks: Banner, Rechts: Icon.\nACHTUNG: Auf dem Handy sieht man nur das Banner!" })
+        .setFooter({ text: i18n.__("embed.embed_footer") })
         .setColor("RANDOM");
 
     const embed2 = new MessageEmbed()

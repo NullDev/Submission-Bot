@@ -8,5 +8,9 @@
         "new_submission_button_label": "Submit a picture",
         "token_login_sucess": "Token login successful!",
         "token_rejected": "Login failed! Is your token correct?"
+    },
+    "embed": {
+        "submission_of": "Submission of %s",
+        "embed_footer": "Click on the image to enlarge it!"
     }
 }
