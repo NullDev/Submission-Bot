@@ -1,0 +1,32 @@
+{
+    "app": {
+        "logged_in": "Als %s eingeloggt!",
+        "new_submission_command_description": "Reiche ein neues Bild ein",
+        "create_button_command_description": "Erstelle einen Button für User um Bilder einzureichen",
+        "create_submission_button_description": "Klicke auf den Button um ein Bild zu einzureichen!\nFalls das nicht funktioniert, versuch es mit `/submit`",
+        "created_button": "Button erstellt!",
+        "new_submission_button_label": "Bild einreichen",
+        "token_login_sucess": "Token login erfolgreich!",
+        "token_rejected": "Login fehlgeschlagen! Ist der Token richtig?"
+    },
+    "embed": {
+        "submission_of": "Bild von %s",
+        "embed_footer": "Klicke auf das Bil dum es zu vergrößern!"
+    },
+    "prompt": {
+        "canceled": "Abgebrochen!",
+        "no_image": "Du hast kein Bild gesendet!",
+        "no_text": "Du hast keinen Text gesendet!",
+        "too_slow": "Zu langsam! Bitte versuche es erneut"
+    },
+    "interaction": {
+        "already_pending_submission": "Du reichst gerade schon ein Bild ein! Bitte schließe den Prozess erst ab, bevor du ein weiteres Bild einreichst.",
+        "check_dms": "Schau in deine PN's :)",
+        "user_greeting": "Hallo!\nHier kannst du dein Bild einreichen.\nWenn du es dir anders überlegst, kannst du jederzeit einfach \"stop\" schreiben!\n----",
+        "dms_deactivated": "Du hast deine PN's anscheinend deaktiviert. Bitte aktiviere sie, um diesen Bot zu verwenden.",
+        "post_the_image": "Bitte sende das **BILD**:",
+        "post_the_decsription": "Bitte sende eine kurze **BESCHREIBUNG**:",
+        "no_post_permission": "Fehler: Keine Rechte zum senden!",
+        "submission_successful": "Dein Bild wurde erfolgreich eingereicht!"
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "app": {
+        "logged_in": "Logged in as %s!",
+        "new_submission_command_description": "Create a new image submission",
+        "create_button_command_description": "Create a button for users to submit pictures",
+        "create_submission_button_description": "Click the button to submit a new picture.\nIf that doesn't work, try `/submit`",
+        "created_button": "Created button!",
+        "new_submission_button_label": "Submit a picture",
+        "token_login_sucess": "Token login successful!",
+        "token_rejected": "Login failed! Is your token correct?"
+    },
+    "embed": {
+        "submission_of": "Submission of %s",
+        "embed_footer": "Click on the image to enlarge it!"
+    },
+    "prompt": {
+        "canceled": "Canceled!",
+        "no_image": "You didn't send an image!",
+        "no_text": "You didn't send any text!",
+        "too_slow": "You took too long to respond. Try again"
+    },
+    "interaction": {
+        "already_pending_submission": "You already have a pending submission! Please either finish or cancel it before submitting another one.",
+        "check_dms": "Check your DMs :)",
+        "user_greeting": "Heya! You can submit your image here.\nIf you change your mind, you can send \"stop\" at any point!\n----",
+        "dms_deactivated": "You have deactivated your DMs. Please activate them to use this bot.",
+        "post_the_image": "Please post the **IMAGE**:",
+        "post_the_decsription": "Please post a short **DESCRIPTION**:",
+        "no_post_permission": "Error: No permissions to send message!",
+        "submission_successful": "Your submission has been successfully sent!"
+    }
+}

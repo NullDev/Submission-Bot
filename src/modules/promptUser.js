@@ -1,3 +1,5 @@
+import i18n from "i18n-light";
+
 /* eslint-disable consistent-return */
 
 /**
@@ -11,7 +13,7 @@
 const promptUser = async function(prompt, interaction, desired){
     await interaction.user.send({ content: prompt });
 
-    return new Promise((resolve) => {
+    return new Promise(resolve => {
         interaction.user.dmChannel?.awaitMessages({
             filter: m => m.author.id === interaction.user.id,
             max: 1,
@@ -22,7 +24,7 @@ const promptUser = async function(prompt, interaction, desired){
             if (!msg) return;
 
             if (String(msg.content).toLowerCase() === "stop"){
-                interaction.user.send("Abgebrochen!");
+                interaction.user.send(i18n.__("prompt.canceled"));
                 return resolve(null);
             }
 
@@ -33,12 +35,12 @@ const promptUser = async function(prompt, interaction, desired){
                     || !["image/gif", "image/png", "image/jpg", "image/jpeg"].includes(String(msg.attachments.at(0)?.contentType))
                 )
             ){
-                interaction.user.send("Du hast kein Bild gesendet!");
+                interaction.user.send(i18n.__("prompt.no_image"));
                 return resolve(promptUser(prompt, interaction, desired));
             }
 
             if (desired === "text" && !msg.content){
-                interaction.user.send("Du hast keine Nachricht gesendet!");
+                interaction.user.send(i18n.__("prompt.no_text"));
                 return resolve(promptUser(prompt, interaction, desired));
             }
 
@@ -50,7 +52,7 @@ const promptUser = async function(prompt, interaction, desired){
                 ),
             );
         }).catch(() => {
-            interaction.user.send("Zu langsam... Versuchs nochmal.");
+            interaction.user.send(i18n.__("prompt.too_slow"));
             resolve(null);
         });
     });
