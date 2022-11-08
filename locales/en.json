@@ -12,5 +12,11 @@
     "embed": {
         "submission_of": "Submission of %s",
         "embed_footer": "Click on the image to enlarge it!"
+    },
+    "prompt": {
+        "canceled": "Canceled!",
+        "no_image": "You didn't send an image!",
+        "no_text": "You didn't send any text!",
+        "too_slow": "You took too long to respond. Try again",
     }
 }

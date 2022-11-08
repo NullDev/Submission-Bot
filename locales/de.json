@@ -12,5 +12,11 @@
     "embed": {
         "submission_of": "Bild von %s",
         "embed_footer": "Klicke auf das Bil dum es zu vergrößern!"
+    },
+    "prompt": {
+        "canceled": "Abgebrochen!",
+        "no_image": "Du hast kein Bild gesendet!",
+        "no_text": "Du hast keinen Text gesendet!",
+        "too_slow": "Zu langsam! Bitte versuche es erneut"
     }
 }
