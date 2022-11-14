@@ -50,8 +50,9 @@ client.on("interactionCreate", async interaction => {
                         .setStyle("PRIMARY"),
                 );
 
+            const id = (await client.guilds.cache.get(config.guild)?.commands.fetch())?.find(cmd => cmd.name === "submit")?.id;
             await interaction.channel?.send({
-                content: i18n.__("app.create_submission_button_description"),
+                content: i18n.__("app.create_submission_button_description", !!id ? `</submit:${id}>` : "`/submit`"),
                 components: [row],
             });
 

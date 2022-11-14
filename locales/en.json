@@ -3,7 +3,7 @@
         "logged_in": "Logged in as %s!",
         "new_submission_command_description": "Create a new image submission",
         "create_button_command_description": "Create a button for users to submit pictures",
-        "create_submission_button_description": "Click the button to submit a new picture.\nIf that doesn't work, try `/submit`",
+        "create_submission_button_description": "Click the button to submit a new picture.\nIf that doesn't work, try %s",
         "created_button": "Created button!",
         "new_submission_button_label": "Submit a picture",
         "token_login_sucess": "Token login successful!",
