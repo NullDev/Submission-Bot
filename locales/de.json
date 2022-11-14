@@ -3,7 +3,7 @@
         "logged_in": "Als %s eingeloggt!",
         "new_submission_command_description": "Reiche ein neues Bild ein",
         "create_button_command_description": "Erstelle einen Button für User, um Bilder einzureichen",
-        "create_submission_button_description": "Klicke auf den Button, um ein Bild zu einzureichen!\nFalls das nicht funktioniert, versuch es mit %s",
+        "create_submission_button_description": "Klicke auf den Button, um ein Bild einzureichen!\nFalls das nicht funktioniert, versuch es mit %s",
         "created_button": "Button erstellt!",
         "new_submission_button_label": "Bild einreichen",
         "token_login_sucess": "Token login erfolgreich!",
